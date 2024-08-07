@@ -1,0 +1,16 @@
+
+node_modules/
+
+
+build/
+
+dev/
+
+.env
+.env.*.local
+
+
+*.log
+
+
+.vscode/

@@ -1,0 +1,91 @@
+@import '../../common/variables.scss';
+//--------------------------------------
+
+
+
+
+//------------------------------------registration
+.registration {
+    width: 100%;
+    height: 100%;
+    @extend %displayCenter;
+}
+
+.holder {}
+
+//---------------nameBlock
+.nameBlock {}
+
+.nameInput {}
+
+//---------------/nameBlock
+
+//---------------surnameBlock
+.surnameBlock {}
+
+.surnameInput {}
+
+//---------------/surnameBlock
+
+//---------------emailBlock
+.emailBlock {}
+
+.emailInput {}
+
+//---------------/emailBlock
+
+//----------------------passwordBlock
+
+.passwordBlock {}
+
+.passwordInput {}
+
+.visibleBlock {}
+
+
+//----------------------heading
+.heading {}
+
+.title {}
+
+//----------------------heading
+
+
+//----------------------/passwordBlock
+
+
+//------------------------------------registration
+
+
+
+//------------------------------------login
+
+.login {
+    width: 100%;
+    height: 100%;
+    @extend %displayCenter;
+}
+
+//----------------------heading
+.heading {}
+
+.title {}
+
+//----------------------heading
+
+.emailBlock {}
+
+.emailInput {}
+
+.errorEmail {}
+
+.passwordBlock {}
+
+.passwordInput {}
+
+.errorPassword {}
+
+
+
+
+//------------------------------------login
