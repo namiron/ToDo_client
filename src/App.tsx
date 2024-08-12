@@ -4,6 +4,7 @@ import Ways from './components/routes/Ways';
 
 const App: React.FC = () => {
   return (
+
     <Ways />
   )
 }

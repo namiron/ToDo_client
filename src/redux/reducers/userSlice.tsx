@@ -5,7 +5,8 @@ import { IInitialState, IUserType } from '../types/IUserProps'
 
 const initialState: IInitialState = {
     isAuth: false,
-    currentUser: {}
+    currentUser: {},
+    isError: ''
 }
 
 const userSlice = createSlice({

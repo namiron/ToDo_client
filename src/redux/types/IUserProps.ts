@@ -30,7 +30,9 @@ export interface ILoginTypes {
 }
 
 
+
 export interface IInitialState {
     isAuth: boolean,
     currentUser: IUserType | {}
+    isError: string
 }

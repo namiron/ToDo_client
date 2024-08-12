@@ -6,6 +6,7 @@ import formStyles from './styles/formStyles.module.scss'
 import { NavLink, Navigate } from 'react-router-dom'
 import { ROUTES } from '../routes/Routes'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
+import { useLogin } from '../../redux/API/user/useLogin'
 
 
 
@@ -23,7 +24,10 @@ const Login: React.FC = () => {
     const dispatch = useAppDispatch()
 
     const handlerAuthUser = (data: ILoginTypes) => {
-
+        dispatch(useLogin({
+            email: data.email,
+            password: data.password
+        }))
         reset()
     }
 

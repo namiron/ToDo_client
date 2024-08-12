@@ -5,6 +5,9 @@ type Todo = {
     completed: boolean
 }
 
+
+
+
 export interface IInitialState {
     status: string;
     list: Array<Todo>;

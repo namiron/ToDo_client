@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector, } from '../../hooks/hooks';
 import { ROUTES } from '../routes/Routes';
 import { exitUser } from '../../redux/reducers/userSlice';
 import { getGoogleUser } from '../../redux/API/user/useGoogle';
+import { useAuthorization } from '../../redux/API/user/useAuthorization';
 
 const Home: React.FC = () => {
     //=--------------------------------------
@@ -21,6 +22,9 @@ const Home: React.FC = () => {
         dispatch(getGoogleUser())
     }, [dispatch])
 
+    React.useEffect(() => {
+        dispatch(useAuthorization())
+    }, [dispatch])
     //=--------------------------------------
     return (
         <>

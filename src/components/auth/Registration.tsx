@@ -8,8 +8,8 @@ import { IRegistrationTypes } from './types/IAuthTypes';
 import { ERRORS_EMAIL, ERRORS_NAME, ERRORS_SURNAME, REGISTRATION } from '../common/constant';
 import { NavLink, Navigate } from 'react-router-dom'
 import { ROUTES } from '../routes/Routes';
-
 import { useGoogleAuth } from '../../redux/API/user/useGoogle';
+import { useRegistration } from '../../redux/API/user/userRegistration';
 
 
 
@@ -29,7 +29,13 @@ const Registration: React.FC = () => {
     const dispatch = useAppDispatch()
 
     const handlerCreateUser = (data: IRegistrationTypes) => {
+        dispatch(useRegistration({
+            name: data.name,
+            email: data.email,
+            surname: data.surname,
+            password: data.password,
 
+        }))
         reset()
     }
     //---------------------------------------

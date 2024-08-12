@@ -8,7 +8,7 @@ import { isUserAuth } from "../../reducers/userSlice";
 export const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export const useGoogleAuth = () => {
-    window.open(`${baseUrl}/auth/google`, '__self')
+    window.open(`${baseUrl}/auth/google`,)
 }
 
 
