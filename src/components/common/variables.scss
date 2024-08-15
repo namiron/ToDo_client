@@ -3,15 +3,16 @@
 //=====================================variables
 $maxWidth: 1440px;
 $containerWidth: 1140px;
-$mainColor: #ed165f;
+$mainColor: #ED165F;
 $cartTextColor: #686868;
 $containerHome: 1440px;
 $ContainerNavigation: 1440px;
-$colorPrice: #f79e1b;
+$colorPrice: #F79E1B;
 
 //=====================================variables
 
 //=======================================================================global
+
 
 %wrapper {
   @extend %displayFlexDirection;
@@ -42,55 +43,58 @@ $colorPrice: #f79e1b;
   display: block;
 }
 
+
 %container {
   max-width: $containerWidth;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
 %containerHome {
-  @media (min-width: 1920px) {
+  @media (min-width:1920px) {
     max-width: none;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  @media (max-width: 1920px) {
+  @media (max-width:1920px) {
     max-width: $containerHome;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
 %containerPages {
-  @media (min-width: 1920px) {
+  @media (min-width:1920px) {
     max-width: none;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  @media (max-width: 1920px) {
+  @media (max-width:1920px) {
     max-width: $ContainerNavigation;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -99,8 +103,7 @@ $colorPrice: #f79e1b;
 //=======================================================================global
 
 //======================================================window
-.laptop {
-}
+.laptop {}
 
 .mobile {
   @extend %lock;
@@ -114,7 +117,7 @@ $colorPrice: #f79e1b;
 
 //--------------------------------------------TEXTS
 %title {
-  font-size: calc(25px + (5 + 5 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(25px + (5 + 5 * 0.8) * ((100vw - 320px)/ 1440));
   font-weight: 700;
   line-height: 1.5;
 }
@@ -122,13 +125,13 @@ $colorPrice: #f79e1b;
 %text {
   line-height: 1.5;
   font-weight: 500;
-  font-size: calc(16px + (1 + 1 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(16px + (1 + 1 * 0.8) * ((100vw - 320px)/ 1440));
 }
 
 %textFlickity {
   line-height: 1.5;
   font-weight: 500;
-  font-size: calc(13px + (1 + 1 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(13px + (1 + 1 * 0.8) * ((100vw - 320px)/ 1440));
 }
 
 %categoryLink {
@@ -151,14 +154,14 @@ $colorPrice: #f79e1b;
   line-height: 1.5;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: calc(18px + (2 + 2 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(18px + (2 + 2 * 0.8) * ((100vw - 320px)/ 1440));
 }
 
 %titlePage {
   line-height: 1.5;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: calc(20px + (5 + 5 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(20px + (5 + 5 * 0.8) * ((100vw - 320px)/ 1440));
 }
 
 //-------------------------------------------------CART-TEXTS
@@ -176,6 +179,7 @@ $colorPrice: #f79e1b;
 
 //-------------------------------------------------CART-TEXTS
 
+
 //-------------------------------------------------------------------------------------------animation
 
 @keyframes shimmer {
@@ -192,7 +196,7 @@ $colorPrice: #f79e1b;
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, #f6f7f8 4%, #edeef1 25%, #f6f7f8 36%);
@@ -216,7 +220,7 @@ $colorPrice: #f79e1b;
 
   &::before {
     transition: width 0.3s ease 0s;
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0%;
     left: 50%;
@@ -233,20 +237,21 @@ $colorPrice: #f79e1b;
       color: $colorPrice;
 
       &::before {
-        content: "";
+        content: '';
         width: 100%;
       }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     &::before {
       transition: width 0.3s ease 0s;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0%;
       left: 50%;
       transform: translateX(-50%);
+      /* Центрирование относительно родительского элемента */
       width: 0%;
       height: 3px;
       background: white;
@@ -257,7 +262,7 @@ $colorPrice: #f79e1b;
       color: white;
 
       &::before {
-        content: "";
+        content: '';
         width: 100%;
       }
     }
@@ -278,11 +283,12 @@ $colorPrice: #f79e1b;
 
   &::before {
     transition: width 0.3s ease 0s;
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
+    /* Центрирование относительно родительского элемента */
     width: 0%;
     height: 3px;
     background: $mainColor;
@@ -294,20 +300,21 @@ $colorPrice: #f79e1b;
       color: $mainColor;
 
       &::before {
-        content: "";
+        content: '';
         width: 100%;
       }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     &::before {
       transition: width 0.3s ease 0s;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0%;
       left: 50%;
       transform: translateX(-50%);
+      /* Центрирование относительно родительского элемента */
       width: 0%;
       height: 3px;
       background: white;
@@ -329,7 +336,7 @@ $colorPrice: #f79e1b;
 
   &::before {
     transition: width 0.3s ease 0s;
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0%;
     left: 0%;
@@ -344,16 +351,16 @@ $colorPrice: #f79e1b;
       color: $mainColor;
 
       &::before {
-        content: "";
+        content: '';
         width: 100%;
       }
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     &::before {
       transition: width 0.3s ease 0s;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0%;
       left: 0%;
@@ -366,11 +373,13 @@ $colorPrice: #f79e1b;
 
 //-------------------------------------------------------------------------------------------------animation
 
+
 //-------------------------------------------------------BURGER-MENU-CONSTRUCTION
 
 %menuBurger {
+
   //------------------------nav
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     position: fixed;
     padding-top: 100px;
     top: 0%;
@@ -394,11 +403,12 @@ $colorPrice: #f79e1b;
 //   left: 0%;
 // }
 
+
 %listMenuBurger {
   //------------------------ul
   @extend %displayComplect;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -412,7 +422,7 @@ $colorPrice: #f79e1b;
   width: fit-content;
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     display: block;
     margin-left: 12px;
   }
@@ -421,12 +431,15 @@ $colorPrice: #f79e1b;
 %linkMenuBurgerItem {
   @extend %link;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     font-size: 20px;
   }
 }
 
 //-------------------------------------------------------BURGER-MENU-CONSTRUCTION
+
+
+
 
 //-------------------------------------------------SIGN IN TEXT
 
@@ -435,6 +448,8 @@ $colorPrice: #f79e1b;
 }
 
 //-------------------------------------------------SIGN IN TEXT
+
+
 
 //--------------------------------------------TEXTS
 
@@ -466,12 +481,13 @@ $colorPrice: #f79e1b;
   align-items: center;
 }
 
+
 %gridComplect {
   display: grid;
   grid-template: 1fr / minmax(180px, 250px) 1fr;
   height: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, auto);
   }
@@ -484,17 +500,17 @@ $colorPrice: #f79e1b;
   grid-template-columns: repeat(3, minmax(280px, 300px));
   grid-template-rows: repeat(1, auto);
 
-  @media (max-width: 1024px) {
+  @media (max-width:1024px) {
     grid-template-columns: repeat(2, minmax(280px, 300px));
     grid-template-rows: repeat(2, auto);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     grid-template-columns: repeat(2, minmax(280px, 300px));
     grid-template-rows: repeat(2, auto);
   }
 
-  @media (max-width: 569px) {
+  @media (max-width:569px) {
     justify-content: center;
     grid-template-columns: repeat(1, minmax(280px, 300px));
     grid-template-rows: repeat(3, auto);
@@ -507,7 +523,7 @@ $colorPrice: #f79e1b;
   grid-template-columns: repeat(2, minmax(240px, 600px));
   grid-template-rows: repeat(1, auto);
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     row-gap: 20px;
     grid-template-columns: minmax(240px, 600px);
     grid-template-rows: repeat(2, auto);
@@ -526,10 +542,11 @@ $colorPrice: #f79e1b;
   gap: 20px;
   grid-template-columns: repeat(2, minmax(250px, 600px));
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     column-gap: 20px;
     row-gap: 0px;
     grid-template-columns: repeat(1, minmax(250px, 1fr));
+
   }
 }
 
@@ -539,23 +556,24 @@ $colorPrice: #f79e1b;
   grid-template-columns: repeat(4, minmax(280px, 1fr));
   grid-template-rows: repeat(4, auto);
 
-  @media (max-width: 1440px) {
+  @media (max-width:1440px) {
     column-gap: 20px;
     row-gap: 0px;
     grid-template-columns: repeat(3, minmax(280px, 1fr));
     grid-template-rows: repeat(8, auto);
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width:1024px) {
     column-gap: 20px;
     row-gap: 0px;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     grid-template-rows: repeat(12, auto);
   }
 
-  @media (max-width: 425px) {
+  @media (max-width:425px) {
     grid-template-columns: repeat(1, minmax(230px, 1fr));
   }
+
 
   %gridFilterPrice {
     width: 100%;
@@ -571,20 +589,20 @@ $colorPrice: #f79e1b;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(1, auto);
 
-  @media (max-width: 1024px) {
+  @media (max-width:1024px) {
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     justify-items: normal;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
   }
 
-  @media (max-width: 425px) {
+  @media (max-width:425px) {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(5, auto);
   }
@@ -594,7 +612,7 @@ $colorPrice: #f79e1b;
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     grid-template-columns: repeat(1, minmax(280px, 1fr));
     grid-template-rows: repeat(10, auto);
   }
@@ -605,13 +623,13 @@ $colorPrice: #f79e1b;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width:768px) {
     gap: 15px;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     grid-template-rows: repeat(2, auto);
   }
 
-  @media (max-width: 525px) {
+  @media (max-width:525px) {
     grid-template-columns: repeat(1, minmax(280px, 1fr));
     grid-template-rows: repeat(3, auto);
   }
@@ -619,13 +637,12 @@ $colorPrice: #f79e1b;
 
 //=============================================display
 
+
 //=====================================================mixin
 //----------------------font-size
 @mixin adaptive-font($pcSize, $mobSize, $maxWidth) {
   $addSize: $pcSize - $mobSize;
-  $fontSize: calc(
-    #{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320})
-  );
+  $fontSize: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320}));
   font-size: $fontSize;
 }
 
@@ -635,9 +652,7 @@ $colorPrice: #f79e1b;
 
 @mixin adaptive-value($property, $pcSize, $mobSize, $maxWidth) {
   $addSize: $pcSize - $mobSize;
-  $paddingTopSize: calc(
-    #{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320})
-  );
+  $paddingTopSize: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320}));
   #{$property}: $paddingTopSize;
 }
 
@@ -672,16 +687,17 @@ $colorPrice: #f79e1b;
 //======================================================adaptive
 
 %TextAdaptiveCalc {
-  font-size: calc(24px + (16 + 16 * 0.8) * ((100vw - 320px) / 1440));
+  font-size: calc(24px + (16 + 16 * 0.8) * ((100vw - 320px)/ 1440));
 }
 
 %adaptiveValueCalc {
-  padding-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1240 - 320)));
+  padding-top: calc(20px + (50 - 20)* ((100vw - 320px)/ (1240 - 320)));
 }
 
 //======================================================adaptive
 
 //   @import "variables.scss";
+
 
 //  @include adaptive-font(35,20,1440);
 //  @include adaptive-value('gap',35,20,1440);

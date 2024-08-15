@@ -6,15 +6,15 @@ import { ROUTES } from "../routes/Routes";
 import { getGoogleUser } from "../../redux/API/user/useGoogle";
 import { useAuthorization } from "../../redux/API/user/useAuthorization";
 import Navigation from "../navigation/Navigation";
-import Search from "../header/Search";
-import User from "../header/User";
-import HomeWays from "../routes/HomeWays";
 
 const Home: React.FC = () => {
   //=--------------------------------------
 
   const isAuth = useAppSelector((state) => state.user.isAuth);
-  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const currentUser = useAppSelector((state) => state.user.currentUser);
+
+  console.log("isAuth", isAuth);
+  console.log("currentUser", currentUser);
 
   const dispatch = useAppDispatch();
   React.useEffect(() => {
@@ -30,19 +30,11 @@ const Home: React.FC = () => {
       {isAuth ? (
         <div className={homeStyles.wrapper}>
           <nav className={homeStyles.navigation}>
-            <Navigation />
+            <Navigation/>
           </nav>
-
           <section className={homeStyles.content}>
-            <header className={homeStyles.header}>
-              <Search />
-              <User />
-            </header>
-            <main className={homeStyles.main}>
-      
-                <HomeWays />
-           
-            </main>
+            <header className={homeStyles.header}>header</header>
+            <main className={homeStyles.main}>main</main>
           </section>
         </div>
       ) : (
