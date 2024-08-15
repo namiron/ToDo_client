@@ -1,37 +1,84 @@
 @import "../../common/variables.scss";
 //--------------------------------------
 
+//-----------------------------------------vars
+$bg: #f0f1f9;
+$colorBtn: #0047d1;
+$color: rgba(0, 71, 209, 0.5);
+//-----------------------------------------vars
+
 .container {
   @extend %displayFlexDirection;
-  @include adaptive-value("padding-top", 20, 10, 1440);
-  @include adaptive-value("padding-bottom", 20, 10, 1440);
-  justify-content: space-between;
+  @include adaptive-value("width", 260, 100, 1440);
+  @include adaptive-value("padding-left", 10, 5, 1440);
+  @include adaptive-value("padding-right", 10, 5, 1440);
+  @include adaptive-value("padding-bottom", 30, 15, 1440);
+  padding-top: 30px;
+  background: $bg;
   height: 100%;
-  @include adaptive-value("gap", 20, 10, 1440);
-  align-items: center;
 }
 .logo {
-    max-width: 40px;
-    @extend %images;
+  @include adaptive-value("padding-bottom", 30, 15, 1440);
+  align-self: center;
+  max-width: 40px;
+  @extend %images;
 }
+
+.newTrip {
+  @extend %display;
+  gap: 5px;
+  justify-content: center;
+  color: #fff;
+  background: $colorBtn;
+  @include adaptive-value("width", 200, 90, 1440);
+  border-radius: 15px;
+  @include adaptive-value("margin-left", 30, 0, 1440);
+  @include adaptive-value("padding-top", 15, 10, 1440);
+  @include adaptive-value("padding-bottom", 15, 10, 1440);
+  @include adaptive-font(16, 14, 1440);
+  @include adaptive-value("margin-bottom", 40, 20, 1440);
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background: $color;
+    transition: all 0.3s ease 0s;
+  }
+}
+
 .list {
-  @extend %displayFlexDirection;
-  @include adaptive-value("gap", 40, 20, 1440);
-  height: 100%;
-}
-.item {
-  width: 35px;
-  height: 35px;
   font-size: 20px;
-  color: gray;
+  @extend %displayFlexDirection;
+  @include adaptive-value("padding-left", 30, 0, 1440);
+  @include adaptive-value("gap", 40, 20, 1440);
+  @include adaptive-value("margin-bottom", 40, 10, 1440);
+}
+.itemBox {
+  @extend %display;
+  @include adaptive-value("gap", 15, 10, 1440);
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+//--------------------------
+.item {
+  align-self: flex-start;
+  color: $color;
+  height: 20px;
   @extend %displayCenter;
   border-radius: 50%;
 }
-.active {
-  color: #fff;
+.name {
+  @include adaptive-font(16, 14, 1440);
+}
+a.active {
+  color: $colorBtn;
   background: rgba(255, 255, 255, 0.1);
 }
+//--------------------------
 
 .exitFromOffice {
+  @include adaptive-value("padding-left", 30, 0, 1440);
   width: fit-content;
+}
+.log {
+  color: $color;
 }

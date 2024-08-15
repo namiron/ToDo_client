@@ -1,0 +1,8 @@
+@import "../../common/variables.scss";
+//--------------------------------------
+
+.container {
+  @include adaptive-value("padding", 20, 10, 1440);
+  background: #fff;
+  border-radius: 20px;
+}
