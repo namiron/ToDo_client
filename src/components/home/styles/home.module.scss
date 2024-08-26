@@ -15,11 +15,13 @@ $bg: #f0f1f9;
 .content {
   @include adaptive-value("padding", 10, 5, 1440);
   flex: 1 1 auto;
+    height: 100%;
 }
 
 //----------------------------------------
 
 .navigation {
+  height: 100%;
 }
 
 .header {
